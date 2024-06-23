@@ -1,0 +1,54 @@
+name: salon_user
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  flutter_svg: ^2.0.10+1
+  pinput: ^5.0.0
+  carousel_slider: ^4.2.1
+  fluttertoast: ^8.2.6
+  readmore: ^3.0.0
+  easy_date_timeline: 
+  device_preview:
+  google_maps_cluster_manager_2: ^3.1.0
+  google_maps_flutter: ^2.5.0
+  maps_launcher: ^2.2.0
+  smooth_carousel_slider_widget: ^0.0.3
+  intl: ^0.18.1
+  dotted_line: ^3.2.2
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/dummy/
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Regular.ttf
+        - asset: assets/fonts/Bold.ttf
+        - asset: assets/fonts/Black.ttf
+        - asset: assets/fonts/ExtraBold.ttf
+        - asset: assets/fonts/ExtraLight.ttf
+        - asset: assets/fonts/Light.ttf
+        - asset: assets/fonts/Medium.ttf
+        - asset: assets/fonts/SemiBold.ttf
