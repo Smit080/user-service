@@ -21,13 +21,6 @@ class DashboardBinding implements Bindings {
   }
 }
 
-class VendorBinding implements Bindings {
-  @override
-  void dependencies() {
-    Get.put<VendorNBookingController>(VendorNBookingController());
-  }
-}
-
 class ProfileBinding implements Bindings {
   @override
   void dependencies() {

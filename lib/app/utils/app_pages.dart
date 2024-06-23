@@ -1,8 +1,5 @@
 import 'package:salon_user/app/presantation/home_screen/search_screen.dart';
-import 'package:salon_user/app/presantation/product_booking_screens/book_service_screen.dart';
-import 'package:salon_user/app/presantation/product_booking_screens/checkout_screen.dart';
 import 'package:salon_user/app/presantation/home_screen/product_listing_screen.dart';
-import 'package:salon_user/app/presantation/product_booking_screens/service_listing_page.dart';
 import 'package:salon_user/app/presantation/profile_screen/common_doc_screen.dart';
 import 'package:salon_user/app/presantation/profile_screen/edit_profile.dart';
 import 'package:salon_user/app/presantation/profile_screen/favourite_screen.dart';
@@ -49,23 +46,6 @@ class AppPages {
       binding: DashboardBinding(),
     ),
     getPage(
-      name: AppRoutes.vendorScreen,
-      page: () => const VendorScreen(),
-      binding: VendorBinding(),
-    ),
-    getPage(
-      name: AppRoutes.serviceList,
-      page: () => const ServiceListingPage(),
-    ),
-    getPage(
-      name: AppRoutes.bookService,
-      page: () => const BookServiceScreen(),
-    ),
-    getPage(
-      name: AppRoutes.bookingCheckout,
-      page: () => const CheckoutScreen(),
-    ),
-    getPage(
       name: AppRoutes.profileScreen,
       binding: ProfileBinding(),
       page: () => const ProfileScreen(),
@@ -89,10 +69,6 @@ class AppPages {
     getPage(
       name: AppRoutes.searchScreen,
       page: () => const SearchScreen(),
-    ),
-    getPage(
-      name: AppRoutes.bookingSearchScreen,
-      page: () => const BookServiceScreen(),
     ),
   ];
 

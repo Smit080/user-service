@@ -20,9 +20,6 @@ dependencies:
   readmore: ^3.0.0
   easy_date_timeline: 
   device_preview:
-  google_maps_cluster_manager_2: ^3.1.0
-  google_maps_flutter: ^2.5.0
-  maps_launcher: ^2.2.0
   smooth_carousel_slider_widget: ^0.0.3
   intl: ^0.18.1
   dotted_line: ^3.2.2
