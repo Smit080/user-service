@@ -70,6 +70,10 @@ class AppPages {
       name: AppRoutes.searchScreen,
       page: () => const SearchScreen(),
     ),
+    getPage(
+      name: AppRoutes.addBusinessScreen,
+      page: () => const AddBusinessDetail(),
+    ),
   ];
 
   static GetPage getPage(

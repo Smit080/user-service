@@ -14,6 +14,7 @@ export '../common_widgets/common_btn.dart';
 export '../common_widgets/common_textfiled.dart';
 export '../presantation/auth_screen/auth_common_screen.dart';
 export '../presantation/auth_screen/register_screen.dart';
+export '../presantation/auth_screen/add_bussiness_detail_screens/add_bussiness_detail.dart';
 export '../presantation/dashboard/dashboard_controller.dart';
 export '../presantation/dashboard/dashboard_screen.dart';
 export '../presantation/home_screen/home_screen.dart';

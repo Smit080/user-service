@@ -21,7 +21,7 @@ class RegisterScreen extends GetWidget<AuthController> {
               const S14Text(AppStrings.pleaseTypeYrFullInfo),
               (size.height * 0.05).vertical(),
               CommonTextfield(
-                controller: controller.name,
+                controller: controller.businessName,
                 hintText: AppStrings.name,
                 prefixIcon: AppAssets.personIc,
               ),

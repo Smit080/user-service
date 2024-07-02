@@ -3,7 +3,7 @@ import 'package:salon_user/app/utils/all_dependancy.dart';
 class AuthController extends GetxController {
   TextEditingController email = TextEditingController();
   TextEditingController pass = TextEditingController();
-  TextEditingController name = TextEditingController();
+  TextEditingController businessName = TextEditingController();
   TextEditingController mobile = TextEditingController();
   TextEditingController rePass = TextEditingController();
   bool obscureText = true;
@@ -11,6 +11,7 @@ class AuthController extends GetxController {
   bool reObscureText = true;
   Timer? timer;
   int otpTime = 60;
+  double indicatorValue = (1 / 3);
 
   void clearTap({bool isBack = false, bool isOtpClear = false, String? page}) {
     if (isBack) {
@@ -52,4 +53,11 @@ class AuthController extends GetxController {
         ":${time.inSeconds.remainder(60) > 9 ? time.inSeconds.remainder(60) : ""
             "0${time.inSeconds.remainder(60)}"}";
   }
+
+  List<(String, String)> categoryList = [
+    (AppAssets.hairIc, "Haircut"),
+    (AppAssets.facialIc, "Facial"),
+  ];
+
+  List<String> selectedCat = [];
 }

@@ -32,7 +32,7 @@ class OtpScreen extends GetWidget<AuthController> {
                 }
                 controller.otpTime = 0;
                 controller.isRegister
-                    ? Get.offAllNamed(AppRoutes.dashboardScreen)
+                    ? Get.offAllNamed(AppRoutes.addBusinessScreen)
                     : Get.toNamed(AppRoutes.resetPassScreen);
                 controller.update();
               },

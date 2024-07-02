@@ -1,4 +1,4 @@
-package com.salonuserapp.mobile
+package com.salonvendorapp.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

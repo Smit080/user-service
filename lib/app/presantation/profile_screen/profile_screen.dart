@@ -88,11 +88,11 @@ class ProfileScreen extends StatelessWidget {
         ),
         profileWidget(
           icon: AppAssets.logout,
-          text: AppStrings.logunt,
+          text: AppStrings.logout,
           issuffixIc: false,
           onTap: () => Get.bottomSheet(
             CommonDialog(
-              title: AppStrings.logunt,
+              title: AppStrings.logout,
               desc: AppStrings.areUSureLogout,
               yesbtnString: AppStrings.yesLogout,
               onYesTap: () => Get.offAllNamed(AppRoutes.loginScreen),

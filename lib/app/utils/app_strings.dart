@@ -23,6 +23,7 @@ class AppStrings {
   static const String dontHaveAcc = "Don't have an account? ";
   static const String joinNow = "Join Now";
   static const String name = "Name";
+  static const String businessName = "Business Name";
   static const String enterName = "Enter your full name";
   static const String emailAddress = "Email address";
   static const String enterEmailAddress = "Enter your email address";
@@ -58,6 +59,14 @@ class AppStrings {
   static const String confirmNewPassCap = "Confirm New Password";
   static const String nowUcanCreate = "Now, you can create new password "
       "and confirm it below";
+
+  /// add business detai screen
+  static const String whatServiceDoU = "What service do you offer?";
+  static const String businessDetail = "Business details";
+  static const String tellUsMoreBusiness = "Tell us more about your business.";
+  static const String chooseService =
+      "Choose your primary and business related type service types";
+  static const String continues = "Continue";
 
   /// home screen text
   static const String whatDoU = "What do you want to do?";
@@ -107,7 +116,7 @@ class AppStrings {
   static const String privacy = "Privacy Policy";
   static const String terms = "Terms & Conditions";
   static const String aboutUs = "About us";
-  static const String logunt = "Logout";
+  static const String logout = "Logout";
   static const String notification = "Notification";
   static const String deleteAcc = "Delete Account";
   static const String male = "Male";
