@@ -7,7 +7,8 @@ class HomeController extends GetxController {
   List<String> catList = ["All", "Haircut", "Facial"];
 
   List<(String, String)> categoryList = [
-    (AppAssets.hairIc, "Haircut"),
-    (AppAssets.facialIc, "Facial"),
+    (AppAssets.haircut, "Haircut"),
+    (AppAssets.facial, "Facial"),
+    // (AppAssets.facial, "Facial"),
   ];
 }

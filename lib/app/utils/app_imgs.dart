@@ -38,4 +38,6 @@ class AppAssets {
   static const String mapPin = "${base}map_pin.png";
   static const String dummySalon2 = "assets/dummy/salon2.png";
   static const String dummyPerson1 = "assets/dummy/person1.png";
+  static const String haircut = "assets/dummy/haircut.png";
+  static const String facial = "assets/dummy/facial.png";
 }

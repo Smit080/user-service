@@ -1,4 +1,3 @@
-import 'package:salon_user/app/common_widgets/common_dialog.dart';
 import 'package:salon_user/app/utils/all_dependancy.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -141,6 +140,7 @@ class ProfileScreen extends StatelessWidget {
                     width: 25,
                     height: 25,
                     fit: BoxFit.cover,
+                    // ignore: deprecated_member_use
                     color: AppColor.grey100,
                   ),
                   12.horizontal(),

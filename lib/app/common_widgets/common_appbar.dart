@@ -28,48 +28,47 @@ class CommonAppbar extends StatelessWidget {
             onBackTap!();
           }
         },
-        child: SafeArea(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () => Get.back(),
-                    child: const CircleAvatar(
-                      radius: 25,
-                      backgroundColor: Colors.transparent,
-                      child: Icon(
-                        Icons.arrow_back_ios_rounded,
-                        size: 20,
-                        color: AppColor.grey100,
-                      ),
+        child: Column(
+          children: [
+            (MediaQuery.of(context).padding.top).vertical(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: const CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.transparent,
+                    child: Icon(
+                      Icons.arrow_back_ios_rounded,
+                      size: 20,
+                      color: AppColor.grey100,
                     ),
                   ),
-                  S18Text(
-                    title,
-                    color: AppColor.grey100,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  if (appbarSuffix != null)
-                    appbarSuffix!
-                  else
-                    const CircleAvatar(
-                      radius: 25,
-                      backgroundColor: Colors.transparent,
-                    ),
-                ],
-              ),
-              const Divider(height: 5),
-              Expanded(
-                child: ListView(
-                  primary: false,
-                  padding: padd,
-                  children: children,
                 ),
+                S18Text(
+                  title,
+                  color: AppColor.grey100,
+                  fontWeight: FontWeight.w700,
+                ),
+                if (appbarSuffix != null)
+                  appbarSuffix!
+                else
+                  const CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.transparent,
+                  ),
+              ],
+            ),
+            const Divider(height: 5),
+            Expanded(
+              child: ListView(
+                primary: false,
+                padding: padd,
+                children: children,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

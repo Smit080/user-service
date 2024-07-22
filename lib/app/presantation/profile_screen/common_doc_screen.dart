@@ -12,6 +12,7 @@ class CommonDocScreen extends StatelessWidget {
           padd: const EdgeInsets.all(p16),
           children: [
             S16Text(AppStrings.loremText * 10, maxLines: 10000),
+            20.vertical(),
           ],
         );
       },

@@ -1,4 +1,3 @@
-import 'package:salon_user/app/common_widgets/commmon_product_widgets.dart';
 import 'package:salon_user/app/utils/all_dependancy.dart';
 
 class ProductListingScreen extends StatelessWidget {

@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:salon_user/app/common_widgets/commmon_product_widgets.dart';
 import '../../utils/all_dependancy.dart';
 
 class LocationScreen extends GetView<LocationController> {

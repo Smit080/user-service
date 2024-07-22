@@ -1,4 +1,3 @@
-import 'package:salon_user/app/presantation/product_booking_screens/widgets/service_detail_sheet.dart';
 import 'package:salon_user/app/utils/all_dependancy.dart';
 
 class ServiceContainer extends StatelessWidget {

@@ -27,6 +27,7 @@ class HomeScreen extends GetView<HomeController> {
                   backgroundColor: AppColor.primaryColor,
                   child: SvgPicture.asset(
                     AppAssets.personIc,
+                    // ignore: deprecated_member_use
                     color: AppColor.white,
                   ),
                 ),
@@ -61,45 +62,6 @@ class HomeScreen extends GetView<HomeController> {
             },
           ),
           20.vertical(),
-          const S16Text(
-            AppStrings.whatDoU,
-            fontWeight: FontWeight.w700,
-            color: AppColor.grey100,
-          ),
-          GridView.builder(
-            shrinkWrap: true,
-            itemCount: controller.categoryList.length,
-            physics: const NeverScrollableScrollPhysics(),
-            padding: const EdgeInsets.only(top: 15, bottom: 5),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              childAspectRatio: 0.74,
-            ),
-            itemBuilder: (context, index) {
-              (String, String) catData = controller.categoryList[index];
-              return GestureDetector(
-                onTap: () {
-                  controller.selectedCat = catData.$2;
-                  Get.toNamed(AppRoutes.producListingScreen);
-                },
-                child: Column(
-                  children: [
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: AppColor.primaryLightColor,
-                      child: SvgPicture.asset(catData.$1),
-                    ),
-                    8.vertical(),
-                    S14Text(
-                      catData.$2,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.grey100,
-                    )
-                  ],
-                ),
-              );
-            },
-          ),
           ViewAllBtn(
             onTap: () {
               controller.selectedCat = "";
@@ -190,6 +152,67 @@ class HomeScreen extends GetView<HomeController> {
                 );
               },
             ),
+          ),
+          const S16Text(
+            AppStrings.whatDoU,
+            fontWeight: FontWeight.w700,
+            color: AppColor.grey100,
+          ),
+          GridView.builder(
+            shrinkWrap: true,
+            itemCount: controller.categoryList.length,
+            physics: const NeverScrollableScrollPhysics(),
+            padding: const EdgeInsets.only(top: 15, bottom: 5),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 1.8,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+            ),
+            itemBuilder: (context, index) {
+              (String, String) catData = controller.categoryList[index];
+              return GestureDetector(
+                onTap: () {
+                  controller.selectedCat = catData.$2;
+                  Get.toNamed(AppRoutes.producListingScreen);
+                },
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: AppColor.grey20,
+                  ),
+                  child: SizedBox(
+                    width: double.infinity,
+                    // height: MediaQuery.of(context).size.width / 4,
+                    child: Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                              bottomRight: Radius.circular(10),
+                              topRight: Radius.circular(10),
+                            ),
+                            child: Image.asset(
+                              catData.$1,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: S14Text(
+                            catData.$2,
+                            fontWeight: FontWeight.w700,
+                            color: AppColor.grey100,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),

@@ -64,6 +64,7 @@ class CompanyMapState extends State<CompanyMap> {
       zoomControlsEnabled: false,
       zoomGesturesEnabled: false,
       mapType: MapType.normal,
+      // ignore: prefer_collection_literals
       gestureRecognizers: Set()
         ..add(Factory<EagerGestureRecognizer>(() => EagerGestureRecognizer())),
       initialCameraPosition: CameraPosition(target: widget.latLng, zoom: 15),

@@ -79,6 +79,7 @@ class DashboardScreen extends GetView<DashboardController> {
             children: [
               SvgPicture.asset(
                 icon,
+                // ignore: deprecated_member_use
                 color: isSelect ? AppColor.primaryColor : null,
               ),
               5.vertical(),
