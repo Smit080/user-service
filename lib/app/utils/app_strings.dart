@@ -1,5 +1,6 @@
 class AppStrings {
   static const String appName = "Saloon";
+  static const String rupee = "₹";
   static const String findBarber = "Find Barber an\nSalons"
       " Easily in You\nHands";
   static const String bookYrFav = "Book Your Favourite\n"
@@ -23,8 +24,12 @@ class AppStrings {
   static const String dontHaveAcc = "Don't have an account? ";
   static const String joinNow = "Join Now";
   static const String name = "Name";
+  static const String fname = "First Name";
+  static const String lname = "Last Name";
   static const String businessName = "Business Name";
   static const String enterName = "Enter your full name";
+  static const String enterLName = "Enter your Last name";
+  static const String enterFName = "Enter your First name";
   static const String emailAddress = "Email address";
   static const String enterEmailAddress = "Enter your email address";
   static const String mobileNumber = "Mobile number";
@@ -63,10 +68,19 @@ class AppStrings {
   /// add business detai screen
   static const String whatServiceDoU = "What service do you offer?";
   static const String businessDetail = "Business details";
+  static const String yourBusinessHr = "Your business hours";
   static const String tellUsMoreBusiness = "Tell us more about your business.";
   static const String chooseService =
       "Choose your primary and business related type service types";
   static const String continues = "Continue";
+  static const String ok = "Ok";
+  static const String businessDesc = "Business description";
+  static const String businessLoc = "Business location";
+  static const String whatTeam = "What's your Team size?";
+  static const String businessImg = "Add your business photos";
+  static const String itsMe = "It's just me";
+  static const String whenClient = "When client can book with your?";
+  static const String breaks = "Breaks";
 
   /// home screen text
   static const String whatDoU = "What do you want to do?";
@@ -110,6 +124,7 @@ class AppStrings {
   /// profile screen
   static const String profile = "Profile";
   static const String editProfile = "Edit Profile";
+  static const String addClient = "Add New Client";
   static const String favourite = "Favourite";
   static const String voucher = "Vouchers";
   static const String giftCard = "Gift Cards";
@@ -123,6 +138,7 @@ class AppStrings {
   static const String female = "Female";
   static const String other = "Other";
   static const String update = "Update";
+  static const String add = "Add";
 
   /// booking screen text
   static const String upcoming = "Upcoming";
@@ -134,6 +150,33 @@ class AppStrings {
   static const String cancelBook = "Cancel Booking";
   static const String yesCancel = "Yes, Cancel";
   static const String reorder = "Reorder Booking";
+
+  /// setting screen
+  static const String addBusinessDetail =
+      "Add details to establish your business and adjust your location";
+  static const String secheduleManagement = "Schedule Management";
+  static const String staffMember = "Staff Member";
+  static const String manageMember = "Manage your staff for you business";
+  static const String editUrHr =
+      "Edit your business hours and manage timer-off";
+  static const String serviceSetup = "Service Setup";
+  static const String addServiceDetail =
+      "Add service details and categorize them for easy discovery";
+
+  /// service screen
+  static const String serviceName = "Service name";
+  static const String price = "Price";
+  static const String serviceTime = "Service time";
+  static const String serviceImg = "Service images";
+  static const String personalDetail = "Personal detail";
+
+  /// sells screen
+  static const String today = "Today";
+  static const String weekly = "Last week";
+  static const String monthly = "Last month";
+  static const String yearly = "Last year";
+  static const String byEmployee = "By employee";
+  static const String byService = "By service";
 
   /// error text
   static const String selectOneService = "Please select at least on Service";

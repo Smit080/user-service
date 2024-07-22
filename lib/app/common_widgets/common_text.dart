@@ -1,4 +1,4 @@
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class SText extends StatelessWidget {
   final String text;
@@ -6,6 +6,7 @@ class SText extends StatelessWidget {
   final double size;
   final FontWeight? fontWeight;
   final Color? color;
+
   const SText(
     this.text, {
     super.key,
@@ -36,6 +37,7 @@ class S16Text extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color? color;
   final int? maxLines;
+
   const S16Text(
     this.text, {
     super.key,
@@ -67,6 +69,7 @@ class S18Text extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color? color;
   final int? maxLines;
+
   const S18Text(
     this.text, {
     super.key,
@@ -131,6 +134,7 @@ class S12Text extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color? color;
   final int? maxLines;
+
   const S12Text(
     this.text, {
     super.key,
@@ -162,6 +166,7 @@ class S24Text extends StatelessWidget {
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
   final Color? color;
+
   const S24Text(
     this.text, {
     super.key,
@@ -179,6 +184,36 @@ class S24Text extends StatelessWidget {
         fontWeight: fontWeight ?? FontWeight.bold,
         fontSize: 24,
         color: color ?? AppColor.grey100,
+      ),
+    );
+  }
+}
+
+class DualText extends StatelessWidget {
+  final String text1;
+  final String text2;
+
+  const DualText({super.key, required this.text1, required this.text2});
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+        text: "$text1: ",
+        style: const TextStyle(
+          fontSize: 12,
+          color: AppColor.grey60,
+        ),
+        children: [
+          TextSpan(
+            text: text2,
+            style: const TextStyle(
+              color: AppColor.grey100,
+              fontWeight: FontWeight.w500,
+              fontSize: 12,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,4 +1,4 @@
-import '../utils/all_dependancy.dart';
+import '../utils/all_dependency.dart';
 
 class CommonBtn extends StatelessWidget {
   final String text;

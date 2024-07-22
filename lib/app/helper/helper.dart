@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class Helper {
   static void lightTheme() {
@@ -71,4 +72,67 @@ void showSnackBar(String message, {Color? color}) {
       isDismissible: true,
     ),
   );
+}
+
+Future<List<String>> selectFiles() async {
+  final ImagePicker picker = ImagePicker();
+
+  List<XFile> list = await picker.pickMultiImage(
+    maxHeight: 1920,
+    maxWidth: 1920,
+  );
+
+  List<String> paths = [];
+
+  for (XFile image in list) {
+    if (getImageSize(File(image.path)) != null) {
+      paths.add(image.path);
+    }
+  }
+  if (list.length != paths.length) {
+    showSnackBar(
+      "Please select upto 2mb images only",
+      color: Colors.red,
+    );
+  }
+  return paths;
+}
+
+Future<String> selectFile() async {
+  final ImagePicker picker = ImagePicker();
+
+  XFile? img = await picker.pickImage(
+    source: ImageSource.gallery,
+    maxHeight: 1920,
+    maxWidth: 1920,
+  );
+
+  String paths = "";
+
+  if (img != null) {
+    if (getImageSize(File(img.path)) != null) {
+      paths = img.path;
+    } else {
+      showSnackBar(
+        "Please select upto 2mb images only",
+        color: Colors.red,
+      );
+    }
+  }
+
+  return paths;
+}
+
+String? getImageSize(File selectedImage) {
+  final bytes = selectedImage.readAsBytesSync().lengthInBytes;
+  final kb = bytes / 1024;
+  if (kb < 2048) {
+    return selectedImage.path;
+  } else {
+    return null;
+  }
+}
+
+bool isCurrentMonth(DateTime date1, DateTime date2) {
+  return date1.month == date2.month && date1.year == date2.year;
 }

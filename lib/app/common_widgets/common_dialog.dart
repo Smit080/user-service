@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class CommonDialog extends StatelessWidget {
   final String title;

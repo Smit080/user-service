@@ -1,10 +1,4 @@
-import 'package:salon_user/app/presantation/home_screen/search_screen.dart';
-import 'package:salon_user/app/presantation/home_screen/product_listing_screen.dart';
-import 'package:salon_user/app/presantation/profile_screen/common_doc_screen.dart';
-import 'package:salon_user/app/presantation/profile_screen/edit_profile.dart';
-import 'package:salon_user/app/presantation/profile_screen/favourite_screen.dart';
-
-import 'all_dependancy.dart';
+import 'all_dependency.dart';
 
 class AppPages {
   static const initial = AppRoutes.splashScreen;
@@ -46,25 +40,17 @@ class AppPages {
       binding: DashboardBinding(),
     ),
     getPage(
-      name: AppRoutes.profileScreen,
+      name: AppRoutes.clientScreen,
       binding: ProfileBinding(),
-      page: () => const ProfileScreen(),
+      page: () => const ClientListingScreen(),
     ),
     getPage(
-      name: AppRoutes.editProfileScreen,
-      page: () => const EditProfile(),
-    ),
-    getPage(
-      name: AppRoutes.favouriteScreen,
-      page: () => const FavouriteScreen(),
+      name: AppRoutes.addClientScreen,
+      page: () => const AddClientScreen(),
     ),
     getPage(
       name: AppRoutes.commonDocScreen,
       page: () => const CommonDocScreen(),
-    ),
-    getPage(
-      name: AppRoutes.producListingScreen,
-      page: () => const ProductListingScreen(),
     ),
     getPage(
       name: AppRoutes.searchScreen,
@@ -74,12 +60,22 @@ class AppPages {
       name: AppRoutes.addBusinessScreen,
       page: () => const AddBusinessDetail(),
     ),
+    getPage(
+      name: AppRoutes.addIntervalScreen,
+      page: () => const AddIntervalScreen(),
+    ),
+    getPage(
+      name: AppRoutes.clientDetailScreen,
+      page: () => const ClientDetailScreen(),
+    ),
+    getPage(
+      name: AppRoutes.addStaffMember,
+      page: () => const AddStaffScreen(),
+    ),
   ];
 
   static GetPage getPage(
-          {required String name,
-          required Widget Function() page,
-          Bindings? binding}) =>
+          {required String name, required Widget Function() page, Bindings? binding}) =>
       GetPage(
         name: name,
         page: page,

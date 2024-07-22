@@ -8,6 +8,8 @@ class AppAssets {
   static const String personIc = "${baseIc}person_ic.svg";
   static const String homeIc = "${baseIc}home_ic.svg";
   static const String scheduleIc = "${baseIc}schedule_ic.svg";
+  static const String settingIc = "${baseIc}setting.svg";
+  static const String sellsIc = "${baseIc}sells.svg";
   static const String searchIc = "${baseIc}search_ic.svg";
   static const String search2Ic = "${baseIc}search2_ic.svg";
 
@@ -28,6 +30,10 @@ class AppAssets {
   static const String coupon = "${baseIc}coupon.svg";
   static const String logout = "${baseIc}logout.svg";
   static const String privacy = "${baseIc}privacy.svg";
+  static const String businessIc = "${baseIc}business.svg";
+  static const String serviceSettingIc = "${baseIc}service_setting.svg";
+  static const String scheduleManagementIc = "${baseIc}schedule_management.svg";
+  static const String staffIc = "${baseIc}staff.svg";
 
   static const String base = "assets/images/";
   static const String detailFind1 = "${base}detail_find1.png";

@@ -1,6 +1,5 @@
 import 'package:device_preview/device_preview.dart';
-
-import 'app/utils/all_dependancy.dart';
+import 'app/utils/all_dependency.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

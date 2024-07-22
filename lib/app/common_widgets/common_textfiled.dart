@@ -1,8 +1,8 @@
-import '../utils/all_dependancy.dart';
+import '../utils/all_dependency.dart';
 
 class CommonTextfield extends StatelessWidget {
   final TextEditingController controller;
-  final String prefixIcon;
+  final String? prefixIcon;
   final String hintText;
   final String? title;
   final IconData? suffixIcon;
@@ -14,11 +14,13 @@ class CommonTextfield extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final bool isProfileScreen;
   final bool readOnly;
+  final FontWeight? fontWeight;
+  final Color? textColor;
   const CommonTextfield({
     super.key,
     required this.controller,
-    required this.prefixIcon,
-    required this.hintText,
+    this.prefixIcon,
+    this.hintText = "",
     this.suffixIcon,
     this.onPressed,
     this.onTap,
@@ -29,6 +31,8 @@ class CommonTextfield extends StatelessWidget {
     this.isProfileScreen = false,
     this.readOnly = false,
     this.title,
+    this.fontWeight,
+    this.textColor,
   });
 
   @override
@@ -41,7 +45,7 @@ class CommonTextfield extends StatelessWidget {
           if (title != null)
             S16Text(
               title!,
-              fontWeight: FontWeight.w700,
+              fontWeight: fontWeight ?? FontWeight.w700,
               color: AppColor.grey100,
             ),
           if (title != null) 8.vertical(),
@@ -54,7 +58,7 @@ class CommonTextfield extends StatelessWidget {
             onTap: () {
               if (onTap != null) onTap!();
             },
-            style: const TextStyle(color: AppColor.primaryColor),
+            style: TextStyle(color: textColor ?? AppColor.primaryColor),
             textInputAction: textInputAction ?? TextInputAction.next,
             keyboardType: keyboardType ?? TextInputType.text,
             inputFormatters: inputFormatters,
@@ -67,7 +71,10 @@ class CommonTextfield extends StatelessWidget {
                 color: isProfileScreen ? AppColor.grey60 : AppColor.grey80,
               ),
               border: outlineInputBorder(),
-              contentPadding: const EdgeInsets.symmetric(vertical: 15),
+              contentPadding: EdgeInsets.symmetric(
+                vertical: 15,
+                horizontal: prefixIcon != null ? 0 : 15,
+              ),
               disabledBorder: outlineInputBorder(),
               enabledBorder: outlineInputBorder(),
               errorBorder: outlineInputBorder(),
@@ -83,15 +90,17 @@ class CommonTextfield extends StatelessWidget {
                       ),
                     )
                   : null,
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(12),
-                child: SvgPicture.asset(
-                  prefixIcon,
-                  height: 17,
-                  // ignore: deprecated_member_use
-                  color: AppColor.primaryColor,
-                ),
-              ),
+              prefixIcon: prefixIcon != null
+                  ? Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: SvgPicture.asset(
+                        prefixIcon!,
+                        height: 17,
+                        // ignore: deprecated_member_use
+                        color: AppColor.primaryColor,
+                      ),
+                    )
+                  : null,
             ),
           ),
         ],
@@ -105,4 +114,105 @@ class CommonTextfield extends StatelessWidget {
           color: color ?? (isProfileScreen ? AppColor.grey60 : AppColor.grey20),
         ),
       );
+}
+
+class CommonSearchFiled extends StatefulWidget {
+  final String hintText;
+  final Function(String search) onSearch;
+  const CommonSearchFiled({
+    super.key,
+    required this.hintText,
+    required this.onSearch,
+  });
+
+  @override
+  State<CommonSearchFiled> createState() => _CommonSearchFiledState();
+}
+
+class _CommonSearchFiledState extends State<CommonSearchFiled> {
+  String search = "";
+  TextEditingController searchController = TextEditingController();
+  FocusNode focusNode = FocusNode();
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: AppColor.grey20,
+          ),
+          child: TextFormField(
+            focusNode: focusNode,
+            controller: searchController,
+            cursorColor: AppColor.primaryColor,
+            textInputAction: TextInputAction.search,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              color: AppColor.grey100,
+            ),
+            cursorHeight: 20,
+            onChanged: (value) => setState(() => search = value),
+            decoration: InputDecoration(
+              isDense: true,
+              hintText: widget.hintText,
+              hintStyle: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: AppColor.grey80,
+              ),
+              contentPadding: const EdgeInsets.symmetric(
+                vertical: 7,
+                horizontal: 40,
+              ),
+              border: InputBorder.none,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 8,
+            horizontal: 10,
+          ),
+          child: SvgPicture.asset(
+            AppAssets.search2Ic,
+            width: 20,
+            colorFilter: const ColorFilter.mode(
+              AppColor.grey80,
+              BlendMode.srcIn,
+            ),
+          ),
+        ),
+        if (search.isNotEmpty)
+          Align(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  search = "";
+                  focusNode.unfocus();
+                  searchController.clear();
+                });
+                widget.onSearch("");
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 8,
+                  horizontal: 10,
+                ),
+                child: SvgPicture.asset(
+                  AppAssets.close,
+                  width: 20,
+                  colorFilter: const ColorFilter.mode(
+                    AppColor.grey80,
+                    BlendMode.srcIn,
+                  ),
+                ),
+              ),
+            ),
+          )
+      ],
+    );
+  }
 }

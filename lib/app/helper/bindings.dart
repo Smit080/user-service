@@ -1,4 +1,4 @@
-import '../utils/all_dependancy.dart';
+import '../utils/all_dependency.dart';
 
 class SplashBinding implements Bindings {
   @override
@@ -24,6 +24,6 @@ class DashboardBinding implements Bindings {
 class ProfileBinding implements Bindings {
   @override
   void dependencies() {
-    Get.put<ProfileController>(ProfileController());
+    Get.put<ClientController>(ClientController());
   }
 }
