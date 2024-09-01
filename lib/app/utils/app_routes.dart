@@ -15,7 +15,7 @@ class AppRoutes {
   static const String editProfileScreen = "/edit_profile_screen";
   static const String favouriteScreen = "/favourite_screen";
   static const String commonDocScreen = "/common_doc_screen";
-  static const String producListingScreen = "/product_list_screen";
+  static const String productListingScreen = "/product_list_screen";
   static const String searchScreen = "/search_screen";
   static const String bookingSearchScreen = "/booking_search_screen";
 }

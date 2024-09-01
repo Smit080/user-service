@@ -5,12 +5,12 @@ class AppStrings {
   static const String bookYrFav = "Book Your Favourite\n"
       "Barber and Salon Quickly";
   static const String comeBeHandsome = "Come be Handsome\n"
-      "and Beautifule with\nus right now!";
+      "and Beautiful with\nus right now!";
   static const String next = "Next";
   static const String getStarted = "Get Started";
 
   /// authentication screen text
-  static const String welcomback = "Welcome back,";
+  static const String welcomeBack = "Welcome back,";
   static const String gladToMeet = "Glad to meet you again!,"
       " please login to use the app.";
   static const String createAnAccount = "Create an account,";
@@ -20,7 +20,7 @@ class AppStrings {
   static const String forgotPass = "Forgot password?";
   static const String signIn = "Sign In";
   static const String signInWithGoogle = "Sign In with Google";
-  static const String dontHaveAcc = "Don't have an account? ";
+  static const String donTHaveAcc = "Don't have an account? ";
   static const String joinNow = "Join Now";
   static const String name = "Name";
   static const String enterName = "Enter your full name";
@@ -45,7 +45,7 @@ class AppStrings {
   static const String fPass = "Forgot password,";
   static const String sendCode = "Send Code";
   static const String emailVerification = "Email verification,";
-  static const String pleaeTypeOtp = "Please type OTP code that we give you";
+  static const String pleaseTypeOtp = "Please type OTP code that we give you";
   static const String verifyEmail = "Verify Email";
   static const String resendOn = "Resend on ";
   static const String resendOtp = "Resend OTP";
@@ -56,7 +56,7 @@ class AppStrings {
   static const String newPass = "New password";
   static const String confirmNewPass = "Confirm new password";
   static const String confirmNewPassCap = "Confirm New Password";
-  static const String nowUcanCreate = "Now, you can create new password "
+  static const String nowUCanCreate = "Now, you can create new password "
       "and confirm it below";
 
   /// home screen text
@@ -94,7 +94,7 @@ class AppStrings {
   static const String subTotal = "Sub Total";
   static const String yesLogout = "Yes, Logout";
   static const String yesDelete = "Yes, Delete";
-  static const String cancel = "cancle";
+  static const String cancel = "cancel";
   static const String areUSureLogout = "Are you sure want to Logout?";
   static const String areUSureDelete = "Are you sure want to Delete Account?";
 
@@ -107,7 +107,7 @@ class AppStrings {
   static const String privacy = "Privacy Policy";
   static const String terms = "Terms & Conditions";
   static const String aboutUs = "About us";
-  static const String logunt = "Logout";
+  static const String logout = "Logout";
   static const String notification = "Notification";
   static const String deleteAcc = "Delete Account";
   static const String male = "Male";
@@ -133,8 +133,8 @@ class AppStrings {
   static const String selectSpecialist = "Please select Service Specialist";
 
   /// dummy text
-  static const String loremText = "Lorem ipsum dolor sit amet, consectetur"
-      " adipiscing elit. Ut quis sem ac ex tempus lobortis sit"
-      " amet eu mauris. Class aptent taciti sociosqu ad litora"
-      " torquent per conubia nostra, per inceptos himenaeos. ";
+  static const String loremText = "Lorem ipsum dolor sit amet, consecrate"
+      " disciplining elite. Ut quits sem ac ex tempus lobotomist sit"
+      " amet eu Lauris. Class aptest tacit sociology ad littoral"
+      " torque per conubia nostril, per inceptos nanosiemens. ";
 }

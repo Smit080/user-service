@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class Helper {
   static void lightTheme() {

@@ -1,15 +1,15 @@
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class CommonDialog extends StatelessWidget {
   final String title;
   final String desc;
-  final String yesbtnString;
+  final String yesBtnString;
   final Function() onYesTap;
   const CommonDialog({
     super.key,
     required this.title,
     required this.desc,
-    required this.yesbtnString,
+    required this.yesBtnString,
     required this.onYesTap,
   });
 
@@ -55,7 +55,7 @@ class CommonDialog extends StatelessWidget {
                     15.horizontal(),
                     Expanded(
                       child: CommonBtn(
-                        text: yesbtnString,
+                        text: yesBtnString,
                         btnColor: AppColor.primaryLightColor,
                         textColor: AppColor.primaryColor,
                         vertPad: 12,

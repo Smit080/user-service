@@ -1,4 +1,4 @@
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class SText extends StatelessWidget {
   final String text;

@@ -1,16 +1,16 @@
-import 'package:salon_user/app/utils/all_dependancy.dart';
+import 'package:salon_user/app/utils/all_dependency.dart';
 
 class CommonAppbar extends StatelessWidget {
   final String title;
   final Function()? onBackTap;
   final List<Widget> children;
-  final EdgeInsets? padd;
+  final EdgeInsets? padding;
   final Widget? bottomWidget;
   final Widget? appbarSuffix;
   const CommonAppbar({
     super.key,
     required this.title,
-    this.padd,
+    this.padding,
     this.onBackTap,
     this.bottomWidget,
     required this.children,
@@ -64,7 +64,7 @@ class CommonAppbar extends StatelessWidget {
             Expanded(
               child: ListView(
                 primary: false,
-                padding: padd,
+                padding: padding,
                 children: children,
               ),
             ),
